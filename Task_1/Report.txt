@@ -1,0 +1,116 @@
+Ethical Hacking Task 01: Information Gathering & Reconnaissance
+
+Part A: Target Selection
+
+Website Name : 
+Savitribai Phule Pune University
+
+Website URL:
+unipune.ac.in
+
+Reason:
+To learn passive reconnaissance on a public educational website.
+
+Part B: WHOIS Lookup
+
+Domain Name: unipune.ac.in
+
+Registrar: ERNET India
+
+Registration Date: 23 January 2009
+
+Expiry Date: 23 January 2028
+
+Name Servers:
+ns2-09.azure-dns.net
+ns1.sppu.in
+ns3-09.azure-dns.org
+ns1-09.azure-dns.com
+ns4-09.azure-dns.info
+
+Domain Status: Active
+
+Part C: DNS Enumeration
+
+A Record
+
+121.241.73.169
+
+MX Record
+
+Pref	Hostname	IP Address	TTL	
+5	mailscanner.unipune.ac.in	196.1.114.42
+NKN EDGE Network (AS55847)
+24 hrs	Blacklist Check      SMTP Test
+10	bahiri.unipune.ac.in	196.1.114.24
+NKN EDGE Network (AS55847)
+24 hrs	Blacklist Check      SMTP Test
+15	pumail.unipune.ac.in	196.1.114.97
+NKN EDGE Network (AS55847)
+24 hrs	Blacklist Check      SMTP Test
+
+NS Record
+
+| Domain Name | NS | TTL | 
+|-------------|----|-----|
+| unipune.ac.in | ns2-09.azure-dns.net. | 21600 | 
+| unipune.ac.in | ns3-09.azure-dns.org. | 21600 | 
+| unipune.ac.in | ns4-09.azure-dns.info. | 21600 | 
+| unipune.ac.in | ns1.sppu.in. | 21600 | 
+| unipune.ac.in | ns1-09.azure-dns.com. | 21600 | 
+
+
+TXT Record
+
+Type	Domain Name	TTL	Record
+TXT	unipune.ac.in	60 min	"MS=ms28795906"
+TXT	unipune.ac.in	60 min	"O5ILTUPPK1yGWsYUBwLmPlXEgDwm6yeF3AfepaFaNok"
+TXT	unipune.ac.in	60 min	"_1oq87d66u1nfjn6i3kovp8q3m27hyxm"
+TXT	unipune.ac.in	60 min	"_5bgedyvoqsta0brt4fncthyi1ywo18m "
+TXT	unipune.ac.in	60 min	"ccvg9wc57n2mgr7fffyf0ts1zv721nmd"
+TXT	unipune.ac.in	60 min	"google-site-verification=L9uPN3QxY5Rf4eoWBJwEolW8_U4ugO58_u1ElTr-Bxc"
+TXT	unipune.ac.in	60 min	"khmjj1rsnmlctm1x0hr7w1hh4l6jn90b"
+TXT	unipune.ac.in	60 min	"v=spf1 mx a ip4:196.1.114.97 ip4:196.1.114.24 ip4:196.1.114.42 ~all"
+TXT	unipune.ac.in	60 min	"wskkvbclfcdt3bzpjxdb35bv10hz408w"
+
+Part D: Website Technology Identification
+
+Web Server: IIS 8.5
+CMS: Not Detected
+Programming Language: ASP.NET 4.0.30319
+JavaScript Framework: Bootstrap 4.0.0 (jQuery 1.7.1 library)
+CDN: Not Detected
+
+
+Part E: HTTP Security Headers
+
+
+Header                                               Present (Yes/No)                                                                       Purpose
+Content-Security-Policy (CSP)         No                     Protects against Cross-Site Scripting (XSS) attacks by allowing only trusted content sources.
+X-Frame-Options                              No                      Prevents clickjacking attacks by stopping the website from being embedded in frames.
+X-Content-Type-Options                  No                      Prevents MIME type sniffing and forces browsers to use the declared content type.
+Strict-Transport-Security (HSTS)    No                      Forces browsers to use HTTPS connections for secure communication.
+Referrer-Policy                                  No                      Controls how much referrer information is shared when users navigate to other websites.
+
+
+Part F: Robots.txt & Sitemap Analysis
+
+Does the website have robots.txt?
+Yes
+
+Does the website have sitemap.xml?
+Yes
+
+Information Learned:
+The sitemap lists important pages of the website to help search engines index the site efficiently.
+
+
+Part G: Overall Observations
+
+The reconnaissance process provided useful publicly available information about the selected website. WHOIS lookup revealed domain registration details, DNS enumeration identified important DNS records, technology identification showed the software stack used by the website, HTTP security headers indicated the implemented security measures, and robots.txt and sitemap.xml revealed information intended for search engines. All information was collected using passive reconnaissance techniques without interacting with or exploiting the target website.
+
+Conclusion:
+
+Reconnaissance is the first phase of ethical hacking and penetration testing. During this task, I learned how to gather publicly available information about a target website using passive reconnaissance techniques. I performed WHOIS lookup to identify domain registration details, DNS enumeration to collect DNS records, technology identification to determine the software used by the website, HTTP security header analysis to evaluate basic security configurations, and robots.txt and sitemap.xml analysis to understand information available for search engines. This activity demonstrated that a significant amount of information can be collected without directly interacting with the target system. Such information helps security professionals understand the target environment and identify potential areas for further security assessment. I also understood the importance of performing reconnaissance ethically and legally by using only publicly available information. Overall, this task improved my understanding of the reconnaissance phase and highlighted its importance in planning responsible and effective penetration testing.
+
+

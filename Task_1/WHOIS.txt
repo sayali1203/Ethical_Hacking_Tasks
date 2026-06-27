@@ -1,0 +1,18 @@
+WHOIS Results
+
+Domain Name: unipune.ac.in
+
+Registrar: ERNET India
+
+Registration Date: 23 January 2009
+
+Expiry Date: 23 January 2028
+
+Name Servers:
+ns2-09.azure-dns.net
+ns1.sppu.in
+ns3-09.azure-dns.org
+ns1-09.azure-dns.com
+ns4-09.azure-dns.info
+
+Domain Status: Active
