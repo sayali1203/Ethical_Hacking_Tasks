@@ -1,0 +1,123 @@
+Ethical Hacking Task 02: Network Scanning & Service Enumeration
+
+Target System: localhost (127.0.0.1)
+
+Objective
+
+The objective of this task is to learn the scanning and enumeration phase of ethical hacking using Nmap. This includes identifying open ports, running services, service versions, and operating system information on an authorized system.
+
+Commands Used
+
+1. "nmap --version"
+2. "nmap localhost"
+3. "nmap -sV localhost"
+4. "nmap -O localhost"
+
+
+Part A – Nmap Installation
+
+Nmap was installed successfully and the installation was verified using the "nmap --version" command.
+
+Part B – Localhost Scan
+
+Open Ports
+PORT 	STATE 	SERVICE
+135/tcp     Open     msrpc
+445/tcp	 Open     microsoft-ds
+2869/tcp	 Open     icslap
+
+Total Open Ports: _3_
+
+Part C – Service Version Detection
+
+
+PORT		STATE 		SERVICE		VERSION
+135/tcp		open 		msrpc     		 	Microsoft Windows RPC
+445/tcp 		open 		microsoft-ds?
+2869/tcp 		open 		http				Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+
+
+Part D – Operating System Detection
+
+Was the operating system detected? 
+Yes
+
+Operating System Identified: Microsoft Windows 11
+
+Why is OS detection useful during penetration testing?
+
+Operating system detection helps security professionals identify the target operating system, understand possible vulnerabilities, and perform appropriate security assessments.
+
+
+Part E – Common Port Research
+
++---------+----------+--------------------------------------+----------------------------------------------+
+| Port    | Protocol | Purpose                              | Common Security Risks                         |
++---------+----------+--------------------------------------+----------------------------------------------+
+| 20/21   | FTP      | Used for file transfer between        | Transfers data in plain text, weak            |
+|         |          | computers.                            | authentication, brute-force attacks.          |
++---------+----------+--------------------------------------+----------------------------------------------+
+| 22      | SSH      | Provides secure remote login and      | Weak passwords, brute-force attacks,          |
+|         |          | encrypted communication.              | stolen SSH keys.                              |
++---------+----------+--------------------------------------+----------------------------------------------+
+| 23      | Telnet   | Allows remote access to a computer.   | No encryption, credentials can be             |
+|         |          |                                      | intercepted easily.                           |
++---------+----------+--------------------------------------+----------------------------------------------+
+| 25      | SMTP     | Sends email between mail servers.     | Spam, email spoofing, and relay abuse.         |
++---------+----------+--------------------------------------+----------------------------------------------+
+| 53      | DNS      | Converts domain names into IP         | DNS spoofing, cache poisoning,                |
+|         |          | addresses.                            | amplification attacks.                        |
++---------+----------+--------------------------------------+----------------------------------------------+
+| 80      | HTTP     | Delivers web pages over the Internet. | Data transmitted without encryption,          |
+|         |          |                                      | vulnerable to man-in-the-middle attacks.      |
++---------+----------+--------------------------------------+----------------------------------------------+
+| 110     | POP3     | Retrieves emails from a mail server.  | Password theft if encryption is not used.     |
++---------+----------+--------------------------------------+----------------------------------------------+
+| 143     | IMAP     | Accesses and synchronizes emails      | Unauthorized access if weak authentication    |
+|         |          | across multiple devices.              | is used.                                      |
++---------+----------+--------------------------------------+----------------------------------------------+
+| 443     | HTTPS    | Secure communication between web      | Weak SSL/TLS configuration or expired         |
+|         |          | browsers and websites.                | certificates.                                 |
++---------+----------+--------------------------------------+----------------------------------------------+
+| 445     | SMB      | Windows file and printer sharing.     | Malware spread, ransomware, unauthorized      |
+|         |          |                                      | file access.                                  |
++---------+----------+--------------------------------------+----------------------------------------------+
+| 3389    | RDP      | Remote Desktop access to Windows      | Brute-force attacks, unauthorized remote      |
+|         |          | systems.                              | access if poorly secured.                     |
++---------+----------+--------------------------------------+----------------------------------------------+
+
+Part F – Scan Analysis
+
+1. Which services are currently running?
+The scan found services such as Microsoft RPC and SMB running on my computer.
+
+2. Are all open ports necessary?
+Not always. Some ports are required for system functions while others should be disabled if unused.
+
+3. Which services could become security risks if misconfigured?
+SMB, RDP, FTP and Telnet can become security risks if they are not configured securely.
+
+4. Which port would you disable if it wasn't required?
+If Remote Desktop (3389) is not required, I would disable it to reduce attack surface.
+
+Observations
+
+- The localhost scan identified the open ports available on the system.
+- Service version detection identified the software running on those ports.
+- Operating system detection helped identify the host operating system.
+- The scan demonstrated how Nmap is used during the information-gathering phase of ethical hacking.
+
+
+Recommendations
+
+- Close unnecessary ports.
+- Disable unused services.
+- Keep software updated.
+- Use strong passwords.
+- Enable the firewall.
+- Perform regular security scans.
+
+
+Conclusion
+
+During this task, I learned the importance of network scanning and service enumeration in ethical hacking. Using Nmap, I successfully scanned my local machine to identify open ports, running services, and operating system details. I also understood how service version detection helps identify software versions that may contain vulnerabilities. Researching common network ports improved my understanding of the services they provide and the security risks associated with them. I learned that open ports should be monitored regularly and unnecessary services should be disabled to reduce the attack surface. Overall, this task provided practical experience with one of the most important phases of ethical hacking and improved my understanding of network security, system analysis, and safe, authorized scanning techniques.
